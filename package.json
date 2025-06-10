@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prepare": "husky",
     "format": "prettier --write .",
-    "postinstall": "npm install --platform=linux --arch=x64 lightningcss-linux-x64-gnu sharp || true"
+    "postinstall": "npm rebuild @tailwindcss/oxide --platform=linux --arch=x64"
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
