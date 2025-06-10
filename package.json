@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "sharp": "^0.33.0",
+    "postinstall": "npm install --platform=linux --arch=x64 lightningcss-linux-x64-gnu || true"
   },
   "dependencies": {
     "@bprogress/next": "^3.2.12",
@@ -39,7 +41,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.0.0-alpha.26",
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19",
