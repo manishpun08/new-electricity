@@ -3,6 +3,7 @@ import { useGetDataQuery } from "@/api/api";
 import { endpoints } from "@/api/endpoints";
 import React, { useState } from "react";
 import TabContent from "./TabContent";
+import { useTranslations } from "next-intl";
 
 interface Tab {
   name: string;
@@ -11,6 +12,7 @@ interface Tab {
 
 const NoticeTab = () => {
   const [selectedTab, setSelectedTab] = useState("regular");
+  const t = useTranslations("home");
 
   const { data: MainCategory } = useGetDataQuery({
     url: endpoints.navLinks,
@@ -50,7 +52,7 @@ const NoticeTab = () => {
             selectedTab === "regular" ? "border-white" : "border-transparent"
           } hover:border-white`}
         >
-          Regular
+          {t("Regular")}
         </button>
 
         {/* Dynamic tabs */}
